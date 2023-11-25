@@ -1,12 +1,13 @@
 # app-dtd
 
 ## Install MySQL
-**As a requiriment you need a mysql installation. 
-After the installation complete, issue the following commands providing *<usr>* and *<password>*:
+**As a requiriment you need a mysql installation.**
+
+After the installation complete, issue the following commands providing _usr_ and *pass*:
 ```
 mysql> CREATE DATABASE app;
-mysql> CREATE USER '<usr>'@'%' IDENTIFIED WITH mysql_native_password BY '<pass>';
-mysql> GRANT ALL PRIVILEGES ON *.* TO '<usr>'@'%' WITH GRANT OPTION;
+mysql> CREATE USER '<usr>'@'%' IDENTIFIED WITH mysql_native_password BY 'pass';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'usr'@'%' WITH GRANT OPTION;
 mysql> CREATE TABLE app.item (
     -> item_id INT AUTO_INCREMENT,
     -> date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
