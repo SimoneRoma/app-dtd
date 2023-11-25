@@ -25,3 +25,24 @@ sudo docker build --network=host -t app .
 ```
 sudo docker run -e USER=<your-user> -e PASS=<your-user-password> -e HOST=<mysql-host> -p 5000:5000 app
 ```
+
+## Test
+### Insert new Item
+```
+ubuntu@prova-web:~$ curl -k -X POST http://localhost:5000/v1/items -H "Content-Type: application/json" -d '{"name":"bug42","description":"prova42"}'
+{
+  "message": "Item created successfully."
+}
+```
+### Get Item
+```
+curl http://192.168.1.148:5000/v1/items/1
+{
+  "date": "Sat, 25 Nov 2023 15:54:08 GMT",
+  "description": "prova42",
+  "id": 1,
+  "name": "bug42"
+}
+```
+
+
