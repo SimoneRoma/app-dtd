@@ -1,7 +1,8 @@
 # app-dtd
 
 ## Install MySQL
-**As a requiriment you need a mysql installation. After the installation complete, issue the following commands:**
+**As a requiriment you need a mysql installation. 
+After the installation complete, issue the following commands providing *<usr>* and *<password>*:
 ```
 mysql> CREATE DATABASE app;
 mysql> CREATE USER '<usr>'@'%' IDENTIFIED WITH mysql_native_password BY '<pass>';
