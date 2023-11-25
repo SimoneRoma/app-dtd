@@ -13,7 +13,7 @@ host = os.environ['HOST']
 
 conn_string = "mysql+mysqlconnector://" + user + ":" + password + "@" + host + ":3306/app"
 app.config['SQLALCHEMY_DATABASE_URI'] = conn_string
-
+db = SQLAlchemy(app)
 
 class Item(db.Model):
     item_id = db.Column(db.Integer, primary_key=True)
