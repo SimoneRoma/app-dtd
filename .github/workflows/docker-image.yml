@@ -18,4 +18,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag sroma888/repo-dpt:${{ github.sha }}
     - name: Push to docker hub
-      run: docker push sroma888/repo-dpt:${{ github.sha }}
+      run: docker push sroma888/repo-dpt:latest
