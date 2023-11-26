@@ -16,6 +16,7 @@ spec:
       containers:
       - name: dpt-pod
         image: sroma888/repo-dpt:latest
+        imagePullPolicy: Always
         env:
            - name: USER
              valueFrom:
