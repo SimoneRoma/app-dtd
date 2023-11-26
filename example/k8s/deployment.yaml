@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: dpt-pod
+        image: sroma888/repo-dpt:latest
+        env:
+           - name: USER
+             valueFrom:
+               secretKeyRef:
+                 name: user-name
+                 key: username
+           - name: PASS
+             valueFrom:
+               secretKeyRef:
+                 name: mysql-secret
+                 key: password
+           - name: HOST
+             valueFrom:
+               secretKeyRef:
+                 name: hostname-mysql
+                 key: hostname
+        ports:
+        - containerPort: 5000
+          name: app
