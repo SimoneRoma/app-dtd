@@ -87,5 +87,6 @@ Deploy a test pod to issue some curl against the app service
 ```
 curl -k -X POST http://app:5000/v1/items -H "Content-Type: application/json" -d '{"name":"bug42","description":"prova42"}'
 ```
+```
 curl http://app:5000/v1/items/1
 ```
