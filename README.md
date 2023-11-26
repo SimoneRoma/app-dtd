@@ -63,7 +63,7 @@ mysql> CREATE TABLE app.item (
 ```
 For the sake of simplicity, throughout this tutorial we are going to use root credential (never do that in PROD).
 
-## Install you app on k8s
+## Install your app on k8s
 You can install your app on any k8s distribution you like. This solution has been tested on a vanilla distribution. 
 **This repo has an action to automatically upload a new "latest" tagged image to dockerhub at every push on the master branch**.
 Keep the _imagePullPolicy: Always_ in your container spec always ensure that you download the most up to date image.
