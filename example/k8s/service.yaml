@@ -1,0 +1,10 @@
+Deploy the following service
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+spec:
+  ports:
+  - port: 5000
+  selector:
+    app: app
